@@ -18,7 +18,7 @@ class StackStr {
    * Throws error if empty. */
   pop(): string {
     const val = this.initial.pop();
-    if(val === undefined) throw new Error("Nothing to pop.");
+    if(val === undefined) throw new IndexError;
 
     return val;
   }
@@ -27,7 +27,7 @@ class StackStr {
    * * Throws error if empty.
   */
   peek():string {
-    if(this.initial.length === 0 ) throw new Error("Nothing to see.");
+    if(this.initial.length === 0 ) throw new IndexError;
     return this.initial[this.initial.length - 1];
   }
 
